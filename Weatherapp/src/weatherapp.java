@@ -23,8 +23,7 @@ public class weatherapp {
             return;
         }
 
-        // Fetch weather data from OpenWeatherMap API
-        String apiKey = "6755c50f9fa4beafbaa736835855e713";  // Replace with your OpenWeatherMap API key
+        String apiKey = "6755c50f9fa4beafbaa736835855e713";
         String apiUrl = "https://api.openweathermap.org/data/2.5/forecast?zip= " + input + ",US&appid=" + apiKey;
 
         try {
