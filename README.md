@@ -12,3 +12,7 @@ API Key
 I have my API key not on github which is in my secrets.properties file
 but I have my secretsManager.java which pulls my API from there and uses it 
 in my file.
+
+3rd Party API
+
+I used OpenWeatherMap zipcode API
