@@ -1,3 +1,5 @@
+Hardened Weather App - CIT368 
+
 Referenced Libraries for the Weather App:
 
 - hamcrest-core-1.3.jar
