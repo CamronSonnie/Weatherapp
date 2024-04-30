@@ -24,7 +24,7 @@ public class weatherapp {
             return;
         }
         
-        String apiKey = "6755c50f9fa4beafbaa736835855e713";  
+        String apiKey = SecretsManager.getApiKey(); 
         try {
             String apiUrl = "https://api.openweathermap.org/data/2.5/forecast?zip=" + input + ",US&appid=" + apiKey;
 
@@ -119,4 +119,13 @@ public class weatherapp {
         int diffInDays = (int) ((cal2.getTime().getTime() - cal1.getTime().getTime()) / (1000 * 60 * 60 * 24));
         return diffInDays >= 3;
     }
+
+//    private static void setupLogger() throws IOException {
+//        logger.setUseParentHandlers(false); // Disable console output
+//        FileHandler fileHandler = new FileHandler("logfile.txt");
+//        logger.addHandler(fileHandler);
+//        SimpleFormatter formatter = new SimpleFormatter();
+//        fileHandler.setFormatter(formatter);
+//    }
+
 }
