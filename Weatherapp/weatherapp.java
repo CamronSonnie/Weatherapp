@@ -23,10 +23,8 @@ public class weatherapp {
             System.out.println("Input must be 5 digits");
             return;
         }
-
-        // Fetch weather data from OpenWeatherMap API
-        String apiKey = "6755c50f9fa4beafbaa736835855e713";  // Replace with your OpenWeatherMap API key
-
+        
+        String apiKey = "6755c50f9fa4beafbaa736835855e713";  
         try {
             String apiUrl = "https://api.openweathermap.org/data/2.5/forecast?zip=" + input + ",US&appid=" + apiKey;
 
@@ -66,7 +64,7 @@ public class weatherapp {
                             long timestamp = weatherInfo.getLong("dt") * 1000;  // Convert seconds to milliseconds
                             Date date = new Date(timestamp);
 
-                            // Check if the current time is 8:00 AM and if it's within the next 3 days
+                            // Check if the current time is 8:00 AM
                             calendar.setTime(date);
                             if (calendar.get(Calendar.HOUR_OF_DAY) == 8 && calendar.get(Calendar.MINUTE) == 0) {
                                 System.out.println(dateFormat.format(date));
